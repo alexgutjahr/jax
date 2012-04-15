@@ -1,0 +1,16 @@
+# You can specialize this file for each language.
+# For example, for French create a messages.fr file
+#
+name = Name
+speaker = Speaker
+company = Company
+startsAt = Starts at
+endsAt = Ends at
+description = Description
+added = Added
+
+session.name.required = Session name is required!
+session.speaker.required = Session speaker is required!
+session.startsAt.required = Session start time is required!
+session.endsAt.required = Session end time is required!
+session.description.required = Session description is required!

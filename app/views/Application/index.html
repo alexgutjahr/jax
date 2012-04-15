@@ -1,0 +1,34 @@
+#{extends 'main.html' /}
+#{set title:'JAX 2012 Sessions' /}
+
+<h3>JAX 2012 Sessions</h3>
+
+<div class="sessions">
+  <b>Upcoming:</b>
+  #{if upcoming}
+    <table>
+      #{list items:upcoming, as:'session'}
+        <tr class="${session_parity}">
+          <td>
+            #{display talk:session, as:'header' /}
+          </td>
+        </tr>
+      #{/list}
+    </table>
+  #{/if}
+</div>
+
+<div class="sessions">
+  <b>All Sessions:</b>
+  #{if sessions}
+    <table>
+      #{list items:sessions, as:'session'}
+        <tr class="${session_parity}">
+          <td>
+            #{display talk:session, as:'header' /}
+          </td>
+        </tr>
+      #{/list}
+    </table>
+  #{/if}
+</div>

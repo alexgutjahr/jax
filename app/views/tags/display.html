@@ -1,0 +1,87 @@
+<h2 class="session-title">
+  <a href="@{show(_talk.id)}">${_talk.name}</a>
+</h2>
+
+#{if _as == 'detail'}
+  <div class="session-metadata">
+    <span class="session-author">
+      by ${_talk.speaker} - ${_talk.company} 
+    </span>
+    <span class="session-date">
+      ${_talk.startsAt.format('dd.MM.yyyy')},
+	  ${_talk.startsAt.format('HH:mm')} - ${_talk.endsAt.format('HH:mm')}
+    </span>
+    <span>
+      <a href="#" id="edit">Edit</a>
+    </span>
+  </div>
+
+  <div class="session-content">${_talk.description}</div>
+
+  <div class="session-metadata">
+    <span>added ${_talk.added.since()}</span>
+  </div>
+
+  #{form @delete()}
+    <input type="hidden" name="session.id" value="${_talk.id}" />
+    <input type="submit" value="delete" />
+  #{/form}
+
+  <div id="hidden-stuff" style="display: none;">
+
+    #{form @update()}
+      <div id="session-edit" class="session-content">
+        <b>Session aktualisieren</b>
+
+        <input type="hidden" value="${_talk.id}" name="session.id" />
+        <p class="field">
+          <label>&{'name'}:</label>
+          <input type="text" value="${_talk.name}" name="session.name" />
+          <span class="error">#{error 'session.name'/}</span>
+        </p>
+        <p>
+          <label>&{'speaker'}:</label>
+          <input type="text" value="${_talk.speaker}" name="session.speaker" />
+          <span class="error">#{error 'session.speaker'/}</span>
+        </p>
+        <p>
+          <label>&{'company'}:</label>
+          <input type="text" value="${_talk.company}" name="session.company" />
+          <span class="error">#{error 'session.company'/}</span>
+        </p>
+        <p>
+          <label>&{'startsAt'}:</label>
+          <input type="text" value="${_talk.startsAt.format()}" name="session.startsAt" />
+          <span class="error">#{error 'session.startsAt'/}</span>
+        </p>
+        <p>
+          <label>&{'endsAt'}:</label>
+          <input type="text" value="${_talk.endsAt.format()}" name="session.endsAt" />
+          <span class="error">#{error 'session.endsAt'/}</span>
+        </p>
+        <p>
+          <label>&{'description'}:</label>
+          <input type="text" value="${_talk.description}" name="session.description" />
+          <span class="error">#{error 'session.description'/}</span>
+        </p>
+      </div>
+
+      <input type="submit" value="update!" />
+    #{/form}
+    
+  </div>
+
+  <script type="text/javascript" charset="utf-8">
+    $(function() {
+
+	  $('#edit').click(function() {
+        $('#hidden-stuff').slideDown();
+	  })
+	  
+	  #{ifErrors}
+	    $('#hidden-stuff').show();
+	  #{/ifErrors}
+
+    })
+  </script>
+#{/if}

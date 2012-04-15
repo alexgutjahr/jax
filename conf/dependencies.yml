@@ -1,0 +1,6 @@
+# Application dependencies
+
+require:
+    - play
+    - play -> crud
+    - net.htmlparser.jericho -> jericho-html 3.2

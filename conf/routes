@@ -1,0 +1,11 @@
+GET    /admin                                   module:crud
+
+GET    /                                         Application.index
+GET    /sessions                                 Application.index
+GET    /sessions/{id}                            Application.show
+DELETE /sessions/{id}                            Application.delete
+PUT    /sessions/{id}                            Application.update
+
+GET     /favicon.ico                            404
+GET     /public/                                staticDir:public
+*       /{controller}/{action}                  {controller}.{action}

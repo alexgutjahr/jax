@@ -1,0 +1,18 @@
+# no dotfiles...
+.*
+
+# ... okay, one dotfile
+!.gitignore
+
+# Play! working directories
+db
+out
+eclipse
+log
+logs
+precompiled
+tmp
+test-result
+server.pid
+lib
+data/attachments

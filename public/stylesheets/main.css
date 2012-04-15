@@ -1,0 +1,155 @@
+html, body {
+    background: #364B66 !important;
+    font-family: Helvetica, Arial, Sans !important;
+}
+
+body {
+    width: 900px;
+    padding: 0 30px;
+    margin: auto;
+}
+
+#main {
+    background: #314660;
+    background: -webkit-gradient(linear, left top, left 30%, from(#314660), to(#364B66));
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    padding: 20px;
+}
+
+.session-title {
+    margin: 0;
+}
+
+.session-title a {
+    font-size: 16px;
+    color: #869AB1;
+    text-decoration: none;
+}
+
+.session-title a:hover {
+	color: red;
+}
+
+.session-metadata {
+    color: #BAC36E;
+    display: block;
+    font-size: 70%;
+    display: inline-block;
+}
+
+.session-author {
+    font-size: 130%;
+    font-weight: bold;
+}
+
+.session-metadata a {
+    color: #9FA85D;
+}
+
+.session-content {
+    position: relative;
+    background: #fff;
+    padding: 10px;
+    margin: 10px 0 10px 0;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-box-shadow: 0 2px 0 #BBBBBB;
+}
+
+.session-content table td {
+	color: #444;
+}
+
+h3 {
+    color: #869AB1;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+h3 span {
+    font-size: 80%;
+    font-weight: normal;
+}
+
+form {
+    padding: 10px;
+    background: -webkit-gradient(linear, left top, left 60%, from(#253142), to(#364B66));
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+}
+
+form p {
+    margin: 5px 0 0 0;
+}
+
+form textarea {
+    width: 70%;
+    height: 150px;
+}
+
+form input[type=text] {
+    font-size: 14px;
+    width: 30%;
+}
+
+form textarea {
+	font-size: 14px;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    font-size: 90%;
+    color: #aaa;
+    margin-bottom: 3px;
+}
+
+#footer {
+    border-top: 1px solid #45597A;
+    font-size: 70%;
+    padding: 10px 30px;
+    text-align: center;
+    color: #869AB1;
+    margin-top: 30px;
+}
+
+#footer a {
+    color: #869AB1;
+    font-weight: bold;
+}
+
+tr.odd {
+    background: #BECCE7 !important;
+}
+
+.sessions {
+    position: relative;
+    background: #fff;
+    padding: 10px;
+    margin: 10px 0 50px 0;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-box-shadow: 0 2px 0 #BBBBBB;
+}
+
+table {
+	width: 100%;
+}
+
+label {
+    display: block;
+    font-size: 16px;
+    opacity: .8;
+    float: left;
+    width: 150px;
+    padding: 4px 0;
+}
+
+form .error {
+    color: red;
+    font-size: 14px;
+    
+}
+
+}
