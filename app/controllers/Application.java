@@ -34,7 +34,8 @@ public class Application extends Controller {
     }
     
     /*
-     * -> /views/Application/delete.html
+     * REDIRECT:
+     * -> /views/Application/index.html
      */
     public static void delete(Session session) {
     	Session victim = Session.findById(session.id);

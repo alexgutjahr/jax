@@ -1,13 +1,16 @@
-import org.junit.*;
-import java.util.*;
-import play.test.*;
-import models.*;
+import junit.framework.Assert;
+
+import models.Session;
+
+import org.junit.Test;
+
+import play.test.UnitTest;
 
 public class BasicTest extends UnitTest {
 
     @Test
-    public void aVeryImportantThingToTest() {
-        assertEquals(2, 1 + 1);
+    public void testCorrectSessionCrawling() {
+    	Assert.assertEquals(202, Session.count());
     }
 
 }
