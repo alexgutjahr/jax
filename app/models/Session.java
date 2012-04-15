@@ -46,12 +46,7 @@ public class Session extends Model {
 	public Date added = new Date();
 	
 	public static List<Session> upcoming() {
-		try {
-			return find("startsAt > ? order by startsAt asc", 
-				new SimpleDateFormat("dd.MM.yyyy HH:mm").parse("19.04.2012 11:00")).fetch(10);
-		} catch (ParseException e) {
-			return Collections.emptyList();
-		}
+		return find("startsAt > ? order by startsAt asc", new Date()).fetch(10);
 	}
 	
 	@Override
